@@ -101,7 +101,7 @@ function App2() {
 					}
 				}}>{title}</h2>
 
-				<pre className="text-3xl mt-10 line-height-10"><code font-size='30px'  ref={codeRef} className="text-3xl mt-10 line-height-10" theme='darcula'>{code}</code></pre>
+				<pre className="text-xl sm:text-3xl mt-10 line-height-10"><code font-size='30px' ref={codeRef} className="text-xl sm:text-3xl mt-10 line-height-10" theme='darcula'>{code}</code></pre>
 
 			<h1>
 
