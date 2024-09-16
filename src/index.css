@@ -59,8 +59,6 @@ canvas{
         /* background: linear-gradient(90deg, #2BC0E4, #EAECC6); */
         /* background: linear-gradient(60deg, #8A2387, #E94057, #F27121); */
 
-
-
     }
 
     body{
@@ -69,11 +67,9 @@ canvas{
         scroll-snap-align: start;
     }
 
-
     /* code{
         font-size: 20px;
     } */
-
 
 /* 
     .cm-layer {
@@ -81,14 +77,22 @@ canvas{
     resize: both;
     overflow: auto !important;
 
-
      } */
 
-     .CodeMirror {
+     /* .CodeMirror {
       resize: both;
       overflow: auto !important;
-    }
+    } */
+   
+    pre .CodeMirror-line{
+        font-size: 1.875rem  !important/* 30px */;
+    line-height: 2.25rem  !important
+     } 
 
+     .code-output{
+        font-size: 1.6rem !important;
+        line-height: 2rem !important;
+     }
 
      /* .CodeMirror__wrapper {
     resize: both;

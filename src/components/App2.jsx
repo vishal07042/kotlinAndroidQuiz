@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import playground from 'kotlin-playground';
 import ConfettiExplosion from 'react-confetti-explosion';
+import '../index.css';
 
 // Define some example suggestions for autocomplete
 
@@ -18,7 +19,7 @@ const stripHtmlTags = (html) => {
 function App2() {
 
 	const codeRef = useRef(null);
-	
+
 	useEffect(() => {
 		if (codeRef.current) {
 			playground(codeRef.current); // Initialize the Kotlin Playground when the component mounts
@@ -34,7 +35,7 @@ function App2() {
 			sendResponse({ status: "Quiz changed", quiz: request.quiz });
 		}
 	});
-	
+
 	const [isExploding, setIsExploding] = React.useState(false);
 	const [fullCode, setFullCode] = useState(``);
 
@@ -89,141 +90,141 @@ function App2() {
 
 	return (
 		<>
-		
-		<div className='relative w-full min-h-screen overflow-y-auto flex flex-col items-center p-10 z-10'>
-			
-			<h2 className='text-2xl mt-10' onMouseUp={(e) => {
-				const selectedText = window.getSelection().toString();
-				if (selectedText) {
-					window.navigator.clipboard.writeText(selectedText);
-					console.log("written to clipboard");
-				}
-			}}>{title}</h2>
 
-				<code ref={codeRef} className=''>{code}</code>
+			<div className='relative w-full min-h-screen overflow-y-auto flex flex-col items-center p-10 z-10'>
+
+				<h2 className='text-2xl mt-10' onMouseUp={(e) => {
+					const selectedText = window.getSelection().toString();
+					if (selectedText) {
+						window.navigator.clipboard.writeText(selectedText);
+						console.log("written to clipboard");
+					}
+				}}>{title}</h2>
+
+				<pre className="text-3xl mt-10 line-height-10"><code font-size='30px'  ref={codeRef} className="text-3xl mt-10 line-height-10" theme='darcula'>{code}</code></pre>
 
 			<h1>
-				
-				<button
-					className='bg-blue-500 text-white p-2 rounded-md m-4'
-					onClick={(e) => {
-						window.navigator.clipboard.writeText(code);
-						const button = e.target;
-						button.classList.add('bg-green-500', 'text-white');
-						setTimeout(() => {
-							button.classList.remove('bg-green-500', 'text-white');
-						}, 200);
-					}}
-				>
-					copy to clipborad
-				</button>
-			</h1>
 
-			{isExploding && <ConfettiExplosion  force={0.8} duration={2700} particleCount={250} width={1600} />}
+					<button
+						className='bg-blue-500 text-white p-2 rounded-md m-4'
+						onClick={(e) => {
+							window.navigator.clipboard.writeText(code);
+							const button = e.target;
+							button.classList.add('bg-green-500', 'text-white');
+							setTimeout(() => {
+								button.classList.remove('bg-green-500', 'text-white');
+							}, 200);
+						}}
+					>
+						copy to clipborad
+					</button>
+				</h1>
 
-			{choices.map((choice, index) => {
-				const options = choice.split(/ - \\[ \] | - \\[x\\]/);
-				const musicalNotes = ["♪", "♫", "♬", "♩"];
+				{isExploding && <ConfettiExplosion force={0.8} duration={2700} particleCount={250} width={1600} />}
 
-				return (
-					<div key={index} className='space-y-2'>
-						{options.map((option, idx) => (
-							<button
-								key={idx}
-								className={`card w-full flex items-center justify-between px-12 py-2 border rounded-lg m-4 ${selectedOption === option[0]
+				{choices.map((choice, index) => {
+					const options = choice.split(/ - \\[ \] | - \\[x\\]/);
+					const musicalNotes = ["♪", "♫", "♬", "♩"];
+
+					return (
+						<div key={index} className='space-y-2'>
+							{options.map((option, idx) => (
+								<button
+									key={idx}
+									className={`card w-full flex items-center justify-between px-12 py-2 border rounded-lg m-4 ${selectedOption === option[0]
 										? greenify
 										: reddify
-									}`}
-								onMouseEnter={() => {
-									const num = Math.floor(Math.random() * 89) + 1;
-									console.log(num);
+										}`}
+									onMouseEnter={() => {
+										const num = Math.floor(Math.random() * 89) + 1;
+										console.log(num);
 
-									const aad = new Audio(`../assets/piano-mp3/${num}.mp3`);
-									aad.play();
+										const aad = new Audio(`../assets/piano-mp3/${num}.mp3`);
+										aad.play();
 
-								}}
-								onClick={() => {
-									console.log("playing song");
-									const audio2 = new Audio(
-										`../assets/incorrect.mp3`
-									);
-									const audio = new Audio(
-										`../assets/correct.mp3`
-									);
-
-									if (option[0] != correctAnswerNo) {
-										console.log("wrong ans");
-
-										audio2.play();
-
-									}
-
-									setSelectedOption(option[0]);
-									if (option[0] == correctAnswerNo) {
-										console.log("kar de hara");
-										setIsExploding(true);
-
-										chrome.runtime.sendMessage({ message: "correct" });
-
-										audio.play();
-										setGreenify(
-											"outline outline-green-500 bg-green-100 text-green-500 border border-solid border-2 hover:bg-green-400"
+									}}
+									onClick={() => {
+										console.log("playing song");
+										const audio2 = new Audio(
+											`../assets/incorrect.mp3`
+										);
+										const audio = new Audio(
+											`../assets/correct.mp3`
 										);
 
-										setReddify("outline outline-red-500");
+										if (option[0] != correctAnswerNo) {
+											console.log("wrong ans");
 
-										setTimeout(() => {
-											window.location.reload();
-											// Add any additional actions you want to perform after 5 seconds
-										}, 12000);
-									}
-								}}
-							>
-								<span className='text-xl font-semibold '>
-									{
-										musicalNotes[
-										(index + idx) % musicalNotes.length
-										]
-									}
-								</span>
-								<span className=' items-center font-bold text-2xl px-4'>
-									{option
-										.replace(/\\/g, "")
-										.replace(/\\[x\\]/g, "")
-										.replace(/[\]x]/g, "")
-										.trim()}
-								</span>
-							</button>
-						))}
-					</div>
-				);
-			})}
+											audio2.play();
 
-			<button
-				className='bg-blue-500 text-white p-2 rounded-md m-4'
-				onClick={() => {
-					setVariabletoAnswer(true);
-				}}
-			>
-				show answer
-			</button>
+										}
 
-			<p className='text-2xl m-4 '>{variabletoAnswer ? answer : ""}</p>
+										setSelectedOption(option[0]);
+										if (option[0] == correctAnswerNo) {
+											console.log("kar de hara");
+											setIsExploding(true);
 
-			{variabletoAnswer && <p text-2xl className="m-2">{solution}</p>}
+											chrome.runtime.sendMessage({ message: "correct" });
 
-			{variabletoAnswer && (
+											audio.play();
+											setGreenify(
+												"outline outline-green-500 bg-green-100 text-green-500 border border-solid border-2 hover:bg-green-400"
+											);
+
+											setReddify("outline outline-red-500");
+
+											setTimeout(() => {
+												window.location.reload();
+												// Add any additional actions you want to perform after 5 seconds
+											}, 12000);
+										}
+									}}
+								>
+									<span className='text-xl font-semibold '>
+										{
+											musicalNotes[
+											(index + idx) % musicalNotes.length
+											]
+										}
+									</span>
+									<span className=' items-center font-bold text-2xl px-4'>
+										{option
+											.replace(/\\/g, "")
+											.replace(/\\[x\\]/g, "")
+											.replace(/[\]x]/g, "")
+											.trim()}
+									</span>
+								</button>
+							))}
+						</div>
+					);
+				})}
+
 				<button
-					className='bg-blue-500 text-black p-2 rounded-md m-4'
-					onClick={(e) => {
-						window.location.reload();
+					className='bg-blue-500 text-white p-2 rounded-md m-4'
+					onClick={() => {
+						setVariabletoAnswer(true);
 					}}
 				>
-					next question
+					show answer
 				</button>
-			)}
-		</div>
-	
+
+				<p className='text-2xl m-4 '>{variabletoAnswer ? answer : ""}</p>
+
+				{variabletoAnswer && <p text-2xl className="m-2">{solution}</p>}
+
+				{variabletoAnswer && (
+					<button
+						className='bg-blue-500 text-black p-2 rounded-md m-4'
+						onClick={(e) => {
+							window.location.reload();
+						}}
+					>
+						next question
+					</button>
+				)}
+			</div>
+
 		</>
 	);
 }
