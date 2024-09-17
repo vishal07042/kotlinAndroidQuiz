@@ -101,7 +101,7 @@ function App2() {
 					}
 				}}>{title}</h2>
 
-				<pre className="text-xl sm:text-3xl mt-10 line-height-10"><code font-size='30px' ref={codeRef} className="text-xl sm:text-3xl mt-10 line-height-10" theme='darcula'>{code}</code></pre>
+				<pre className="text-xl  sm:text-3xl mt-10 line-height-10"><code font-size='30px' ref={codeRef} className="text-xl sm:text-3xl mt-10 line-height-10" theme='darcula'>{code}</code></pre>
 
 			<h1>
 
@@ -131,7 +131,7 @@ function App2() {
 							{options.map((option, idx) => (
 								<button
 									key={idx}
-									className={`card w-full flex items-center justify-between px-12 py-2 border rounded-lg m-4 ${selectedOption === option[0]
+									className={`px-3 py-1 m-1 card w-full flex items-center justify-between sm:px-12 sm:py-2 border rounded-lg sm:m-4 ${selectedOption === option[0]
 										? greenify
 										: reddify
 										}`}
@@ -187,12 +187,8 @@ function App2() {
 											]
 										}
 									</span>
-									<span className=' items-center font-bold text-2xl px-4'>
-										{option
-											.replace(/\\/g, "")
-											.replace(/\\[x\\]/g, "")
-											.replace(/[\]x]/g, "")
-											.trim()}
+									<span className='text-xl px-1 items-center font-bold sm:text-2xl sm:px-4'>
+										{option}
 									</span>
 								</button>
 							))}
