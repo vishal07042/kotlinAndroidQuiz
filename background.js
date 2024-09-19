@@ -4303,6 +4303,2515 @@ let jetpackCompose = [
 	},
 ];
 
+let AndroidBasics = [
+	{
+		id: 1,
+		title: "Q1. What is the primary purpose of an Activity in Android?",
+		text: undefined,
+		code2: undefined,
+		choices: [
+			"1. To manage the background processes of an app",
+			"2. To provide a user interface for interacting with the app",
+			"3. To handle data storage and retrieval",
+			"4. To communicate with other apps on the device",
+		],
+		answer: "2. To provide a user interface for interacting with the app",
+	},
+	{
+		id: 2,
+		title: "Q2. How do you start a new Activity from another Activity?",
+		text: undefined,
+		code2: undefined,
+		choices: [
+			"1. `startActivity(new Intent(this, NewActivity.class))`",
+			"2. `launchActivity(NewActivity.class)`",
+			"3. `createActivity(NewActivity.class)`",
+			"4. `openActivity(NewActivity.class)`",
+		],
+		answer: "1. `startActivity(new Intent(this, NewActivity.class))`",
+	},
+	{
+		id: 3,
+		title: "Q3. How can you pass data to another Activity when starting it?",
+		text: undefined,
+		code2: undefined,
+		choices: [
+			"1. Using global variables",
+			"2. Using an Intent with extras",
+			"3. Using a SharedPreferences file",
+			"4. Using a database",
+		],
+		answer: "2. Using an Intent with extras",
+	},
+	{
+		id: 4,
+		title: "Q4. Which lifecycle method is called when an Activity is created?",
+		text: undefined,
+		code2: undefined,
+		choices: [
+			"1. `onStart()`",
+			"2. `onCreate()`",
+			"3. `onResume()`",
+			"4. `onRestart()`",
+		],
+		answer: "2. `onCreate()`",
+	},
+	{
+		id: 5,
+		title: "Q5. What is the difference between `onPause()` and `onStop()`?",
+		text: undefined,
+		code2: undefined,
+		choices: [
+			"1. `onPause()` is called when the Activity is partially visible, while `onStop()` is called when it's completely hidden.",
+			"2. `onStop()` is called when the Activity is partially visible, while `onPause()` is called when it's completely hidden.",
+			"3. `onPause()` is called when the Activity is destroyed, while `onStop()` is called when it's paused.",
+			"4. `onStop()` is called when the Activity is destroyed, while `onPause()` is called when it's paused.",
+		],
+		answer: "1. `onPause()` is called when the Activity is partially visible, while `onStop()` is called when it's completely hidden.",
+	},
+	{
+		id: 6,
+		title: "Q6. What is the purpose of the `onSaveInstanceState()` method?",
+		text: undefined,
+		code2: undefined,
+		choices: [
+			"1. To save the current state of the Activity before it's destroyed.",
+			"2. To create a new instance of the Activity.",
+			"3. To handle user input events.",
+			"4. To manage background tasks.",
+		],
+		answer: "1. To save the current state of the Activity before it's destroyed.",
+	},
+	{
+		id: 7,
+		title: "Q7. How can you ensure that an Activity is launched only once per session?",
+		text: undefined,
+		code2: undefined,
+		choices: [
+			"1. Using the `FLAG_ACTIVITY_NEW_TASK` flag in the Intent.",
+			"2. Using the `FLAG_ACTIVITY_SINGLE_TOP` flag in the Intent.",
+			"3. Using the `FLAG_ACTIVITY_CLEAR_TOP` flag in the Intent.",
+			"4. Using the `FLAG_ACTIVITY_NO_HISTORY` flag in the Intent.",
+		],
+		answer: "2. Using the `FLAG_ACTIVITY_SINGLE_TOP` flag in the Intent.",
+	},
+	{
+		id: 8,
+		title: "Q8. Explain the concept of an Activity's task and back stack.",
+		text: undefined,
+		code2: undefined,
+		choices: [
+			"1. A task represents a group of Activities related to a specific purpose, while the back stack holds the history of launched Activities within a task.",
+			"2. A task is a single Activity, while the back stack is used to manage the order of Activities in the app.",
+			"3. A task represents the current Activity, while the back stack holds the history of all launched Activities in the app.",
+			"4. A task is a group of Activities related to a specific purpose, while the back stack is used to manage the order of Activities in the system.",
+		],
+		answer: "1. A task represents a group of Activities related to a specific purpose, while the back stack holds the history of launched Activities within a task.",
+	},
+	{
+		id: 9,
+		title: "Q9. How can you make an Activity finish itself after starting another Activity?",
+		text: undefined,
+		code2: undefined,
+		choices: [
+			"1. By setting `finish()` in the `onPause()` method.",
+			"2. By setting `finish()` in the `onStop()` method.",
+			"3. By setting `finish()` in the `onCreate()` method of the new Activity.",
+			"4. By setting `finish()` in the `startActivity()` method.",
+		],
+		answer: "4. By setting `finish()` in the `startActivity()` method.",
+	},
+	{
+		id: 10,
+		title: "Q10. What is the difference between `startActivityForResult()` and `startActivity()`?",
+		text: undefined,
+		code2: undefined,
+		choices: [
+			"1. `startActivityForResult()` allows you to receive a result from the started Activity, while `startActivity()` does not.",
+			"2. `startActivity()` allows you to receive a result from the started Activity, while `startActivityForResult()` does not.",
+			"3. `startActivityForResult()` is used to start an Activity in a new task, while `startActivity()` is used to start an Activity in the same task.",
+			"4. `startActivity()` is used to start an Activity in a new task, while `startActivityForResult()` is used to start an Activity in the same task.",
+		],
+		answer: "1. `startActivityForResult()` allows you to receive a result from the started Activity, while `startActivity()` does not.",
+	},
+	{
+  "id": 11,
+  "title": "Q11. What is the purpose of an Intent in Android?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To represent a user interface element",
+    "2. To communicate between different components of an Android app",
+    "3. To manage data storage and retrieval",
+    "4. To handle network requests"
+  ],
+  "answer": "2. To communicate between different components of an Android app"
+},
+{
+  "id": 12,
+  "title": "Q12. What are the two main types of Intents?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. Explicit and Implicit",
+    "2. Direct and Indirect",
+    "3. Local and Remote",
+    "4. Simple and Complex"
+  ],
+  "answer": "1. Explicit and Implicit"
+},
+{
+  "id": 13,
+  "title": "Q13. How do you create an explicit Intent?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. `new Intent(this, NewActivity.class)`",
+    "2. `new Intent(ACTION_VIEW, Uri.parse('https://www.google.com'))`",
+    "3. `new Intent('android.intent.action.SEND')`",
+    "4. `new Intent(ACTION_DIAL, Uri.parse('tel:1234567890'))`",
+		],
+		answer: "1. `new Intent(this, NewActivity.class)`",
+	},
+	{
+  "id": 14,
+  "title": "Q14. What is an implicit Intent?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. An Intent that specifies the exact component to be launched.",
+    "2. An Intent that specifies the action and data to be processed, but not the specific component to handle it.",
+    "3. An Intent that is used to start a service.",
+    "4. An Intent that is used to send a broadcast."
+  ],
+  "answer": "2. An Intent that specifies the action and data to be processed, but not the specific component to handle it."
+},
+{
+  "id": 15,
+  "title": "Q15. How can you start an activity to open a web page using an Intent?",
+  "text": undefined,
+  "code2": undefined,
+		choices: [
+			"1. `startActivity(new Intent(ACTION_VIEW, Uri.parse('https://www.google.com')))`",
+			"2. `startActivity(new Intent(ACTION_SEND, Uri.parse('https://www.google.com')))`",
+			"3. `startActivity(new Intent(ACTION_DIAL, Uri.parse('https://www.google.com')))`",
+			"4. `startActivity(new Intent(ACTION_CALL, Uri.parse('https://www.google.com')))`",
+		],
+		answer: "1. `startActivity(new Intent(ACTION_VIEW, Uri.parse('https://www.google.com')))`",
+},
+{
+  "id": 16,
+  "title": "Q16. What are Intent filters used for?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To specify the type of data an Activity can handle.",
+    "2. To define the actions an Activity can respond to.",
+    "3. To control the lifecycle of an Activity.",
+    "4. To manage data storage and retrieval."
+  ],
+  "answer": "1. To specify the type of data an Activity can handle."
+},
+{
+  "id": 17,
+  "title": "Q17. How can you send a text message using an Intent?",
+  "text": undefined,
+  "code2": undefined,
+		choices: [
+			"1. `startActivity(new Intent(ACTION_SEND, Uri.parse('sms:1234567890')))`",
+			"2. `startActivity(new Intent(ACTION_SENDTO, Uri.parse('smsto:1234567890')))`",
+			"3. `startActivity(new Intent(ACTION_CALL, Uri.parse('tel:1234567890')))`",
+			"4. `startActivity(new Intent(ACTION_DIAL, Uri.parse('tel:1234567890')))`",
+		],
+		answer: "2. `startActivity(new Intent(ACTION_SENDTO, Uri.parse('smsto:1234567890')))`",
+},
+{
+  "id": 18,
+  "title": "Q18. What is the purpose of the `PendingIntent` class?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To represent an intent that can be executed at a later time.",
+    "2. To store user input data.",
+    "3. To manage the lifecycle of an Activity.",
+    "4. To handle network requests."
+  ],
+  "answer": "1. To represent an intent that can be executed at a later time."
+},
+{
+  "id": 19,
+  "title": "Q19. How can you create a PendingIntent that triggers an Activity when a notification is clicked?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. `PendingIntent.getActivity(context, 0, new Intent(context, NewActivity.class), 0)`",
+    "2. `PendingIntent.getService(context, 0, new Intent(context, NewService.class), 0)`",
+    "3. `PendingIntent.getBroadcast(context, 0, new Intent(context, NewReceiver.class), 0)`",
+    "4. `PendingIntent.getAlarm(context, 0, new Intent(context, NewAlarm.class), 0)`"
+  ],
+  "answer": "1. `PendingIntent.getActivity(context, 0, new Intent(context, NewActivity.class), 0)`"
+},
+{
+  "id": 20,
+  "title": "Q20. What is the difference between `startService()` and `bindService()`?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. `startService()` starts a service that runs in the background, while `bindService()` starts a service that is bound to a specific client.",
+    "2. `bindService()` starts a service that runs in the background, while `startService()` starts a service that is bound to a specific client.",
+    "3. `startService()` starts a service that is used to send broadcasts, while `bindService()` starts a service that is used to handle data.",
+    "4. `bindService()` starts a service that is used to send broadcasts, while `startService()` starts a service that is used to handle data."
+  ],
+  "answer": "1. `startService()` starts a service that runs in the background, while `bindService()` starts a service that is bound to a specific client."
+},
+{
+  "id": 21,
+  "title": "Q21. List the lifecycle methods of an Activity in order of execution.",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. `onCreate()`, `onStart()`, `onResume()`, `onPause()`, `onStop()`, `onRestart()`, `onDestroy()`",
+    "2. `onCreate()`, `onResume()`, `onStart()`, `onPause()`, `onStop()`, `onDestroy()`, `onRestart()`",
+    "3. `onStart()`, `onCreate()`, `onResume()`, `onPause()`, `onStop()`, `onRestart()`, `onDestroy()`",
+    "4. `onCreate()`, `onResume()`, `onStart()`, `onRestart()`, `onPause()`, `onStop()`, `onDestroy()`"
+  ],
+  "answer": "1. `onCreate()`, `onStart()`, `onResume()`, `onPause()`, `onStop()`, `onRestart()`, `onDestroy()`"
+},
+{
+  "id": 22,
+  "title": "Q22. In which lifecycle method should you initialize UI elements?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. `onCreate()`",
+    "2. `onStart()`",
+    "3. `onResume()`",
+    "4. `onRestart()`"
+  ],
+  "answer": "1. `onCreate()`"
+},
+{
+  "id": 23,
+  "title": "Q23. When is the `onResume()` method called?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. When the Activity is created.",
+    "2. When the Activity becomes visible to the user.",
+    "3. When the Activity is paused.",
+    "4. When the Activity is destroyed."
+  ],
+  "answer": "2. When the Activity becomes visible to the user."
+},
+{
+  "id": 24,
+  "title": "Q24. What happens when the `onPause()` method is called?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. The Activity is completely destroyed.",
+    "2. The Activity is partially visible.",
+    "3. The Activity is hidden from the user.",
+    "4. The Activity is in the background, but still running."
+  ],
+  "answer": "2. The Activity is partially visible."
+},
+{
+  "id": 25,
+  "title": "Q25. Which lifecycle method is called when an Activity is brought back to the foreground?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. `onResume()`",
+    "2. `onRestart()`",
+    "3. `onStart()`",
+    "4. `onCreate()`"
+  ],
+  "answer": "1. `onResume()`"
+},
+{
+  "id": 26,
+  "title": "Q26. When is the `onRestart()` method called?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. When the Activity is created.",
+    "2. When the Activity is brought back to the foreground after being stopped.",
+    "3. When the Activity is paused.",
+    "4. When the Activity is destroyed."
+  ],
+  "answer": "2. When the Activity is brought back to the foreground after being stopped."
+},
+{
+  "id": 27,
+  "title": "Q27. What is the purpose of the `onDestroy()` method?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To save the current state of the Activity.",
+    "2. To release resources held by the Activity.",
+    "3. To handle user input events.",
+    "4. To start a new Activity."
+  ],
+  "answer": "2. To release resources held by the Activity."
+},
+{
+  "id": 28,
+  "title": "Q28. How can you use the `onSavedInstanceState()` method to save the current state of an Activity?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By storing data in a global variable.",
+    "2. By saving data to a file.",
+    "3. By using a `Bundle` object to store key-value pairs.",
+    "4. By using a database to store the data."
+  ],
+  "answer": "3. By using a `Bundle` object to store key-value pairs."
+},
+{
+  "id": 29,
+  "title": "Q29. How do you restore the saved state of an Activity using the `onRestoreInstanceState()` method?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By reading data from a global variable.",
+    "2. By reading data from a file.",
+    "3. By retrieving data from the `Bundle` object passed to the method.",
+    "4. By retrieving data from a database."
+  ],
+  "answer": "3. By retrieving data from the `Bundle` object passed to the method."
+},
+{
+  "id": 30,
+  "title": "Q30. Explain the concept of Activity state and how it is preserved during configuration changes.",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. Activity state refers to the data and UI elements associated with the Activity, and it is preserved by automatically saving and restoring the `Bundle` object during configuration changes.",
+    "2. Activity state refers to the data and UI elements associated with the Activity, and it is preserved by using the `onSavedInstanceState()` and `onRestoreInstanceState()` methods.",
+    "3. Activity state refers to the data and UI elements associated with the Activity, and it is preserved by using the `onPause()` and `onResume()` methods.",
+    "4. Activity state refers to the data and UI elements associated with the Activity, and it is preserved by using the `onStop()` and `onRestart()` methods."
+  ],
+  "answer": "1. Activity state refers to the data and UI elements associated with the Activity, and it is preserved by automatically saving and restoring the `Bundle` object during configuration changes."
+},
+{
+  "id": 31,
+  "title": "Q31. What is a Broadcast Receiver?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. A component that listens for system events and broadcasts them to other apps.",
+    "2. A component that handles user input events.",
+    "3. A component that manages data storage and retrieval.",
+    "4. A component that handles network requests."
+  ],
+  "answer": "1. A component that listens for system events and broadcasts them to other apps."
+},
+{
+  "id": 32,
+  "title": "Q32. How do you register a Broadcast Receiver?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By using the `registerReceiver()` method in your Activity.",
+    "2. By declaring the Receiver in the manifest.",
+    "3. By using the `startService()` method.",
+    "4. By using the `bindService()` method."
+  ],
+  "answer": "1. By using the `registerReceiver()` method in your Activity."
+},
+{
+  "id": 33,
+  "title": "Q33. What is the difference between static and dynamic registration of a Broadcast Receiver?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. Static registration registers the Receiver in the manifest, while dynamic registration registers it in code.",
+    "2. Dynamic registration registers the Receiver in the manifest, while static registration registers it in code.",
+    "3. Static registration is used for system broadcasts, while dynamic registration is used for app-specific broadcasts.",
+    "4. Dynamic registration is used for system broadcasts, while static registration is used for app-specific broadcasts."
+  ],
+  "answer": "1. Static registration registers the Receiver in the manifest, while dynamic registration registers it in code."
+},
+{
+  "id": 34,
+  "title": "Q34. What is the purpose of the `onReceive()` method in a Broadcast Receiver?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To register the Receiver for broadcasts.",
+    "2. To handle received broadcasts.",
+    "3. To send broadcasts to other apps.",
+    "4. To manage the lifecycle of the Receiver."
+  ],
+  "answer": "2. To handle received broadcasts."
+},
+{
+  "id": 35,
+  "title": "Q35. How do you unregister a Broadcast Receiver?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By calling the `unregisterReceiver()` method in your Activity.",
+    "2. By removing the Receiver declaration from the manifest.",
+    "3. By using the `stopService()` method.",
+    "4. By using the `unbindService()` method."
+  ],
+  "answer": "1. By calling the `unregisterReceiver()` method in your Activity."
+},
+{
+  "id": 36,
+  "title": "Q36. What is the purpose of the `sendBroadcast()` method?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To register a Broadcast Receiver.",
+    "2. To send a broadcast to other apps.",
+    "3. To handle received broadcasts.",
+    "4. To manage the lifecycle of a Broadcast Receiver."
+  ],
+  "answer": "2. To send a broadcast to other apps."
+},
+{
+  "id": 37,
+  "title": "Q37. What is the difference between `sendBroadcast()`, `sendOrderedBroadcast()`, and `sendStickyBroadcast()`?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. `sendBroadcast()` sends a broadcast to all registered receivers, while `sendOrderedBroadcast()` sends a broadcast to receivers in a specific order.",
+    "2. `sendOrderedBroadcast()` sends a broadcast to all registered receivers, while `sendBroadcast()` sends a broadcast to receivers in a specific order.",
+    "3. `sendStickyBroadcast()` sends a broadcast that remains available to all registered receivers until explicitly removed.",
+    "4. All three methods send broadcasts to registered receivers, but with different levels of control and behavior."
+  ],
+  "answer": "4. All three methods send broadcasts to registered receivers, but with different levels of control and behavior."
+},
+{
+  "id": 38,
+  "title": "Q38. What are some common system broadcasts that you can listen to?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. `ACTION_BOOT_COMPLETED`",
+    "2. `ACTION_BATTERY_CHANGED`",
+    "3. `ACTION_SCREEN_ON`",
+    "4. `ACTION_HEADSET_PLUG`",
+    "5. All of the above"
+  ],
+  "answer": "5. All of the above"
+},
+{
+  "id": 39,
+  "title": "Q39. How can you create a custom broadcast to communicate between different components of your app?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By creating a new Intent with a custom action and sending it using `sendBroadcast()`.",
+    "2. By using a SharedPreferences file to store and retrieve data.",
+    "3. By using a database to store and retrieve data.",
+    "4. By using a global variable to share data."
+  ],
+  "answer": "1. By creating a new Intent with a custom action and sending it using `sendBroadcast()`."
+},
+{
+  "id": 40,
+  "title": "Q40. What is the best way to handle network connectivity changes in an Android app?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By using the `NetworkChangeReceiver` class.",
+    "2. By listening for the `ACTION_BATTERY_CHANGED` broadcast.",
+    "3. By polling the network status periodically.",
+    "4. By using a background service to monitor network connectivity."
+  ],
+  "answer": "1. By using the `NetworkChangeReceiver` class."
+},
+{
+  "id": 41,
+  "title": "Q41. What is the purpose of the Notification Manager in Android?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To manage data storage and retrieval.",
+    "2. To handle user input events.",
+    "3. To display notifications to the user.",
+    "4. To communicate with other apps on the device."
+  ],
+  "answer": "3. To display notifications to the user."
+},
+{
+  "id": 42,
+  "title": "Q42. How do you get an instance of the Notification Manager in an Activity?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. `NotificationManager manager = new NotificationManager()`",
+    "2. `NotificationManager manager = getSystemService(NOTIFICATION_SERVICE)`",
+    "3. `NotificationManager manager = getNotificationManager()`",
+    "4. `NotificationManager manager = NotificationManager.getInstance()`"
+  ],
+  "answer": "2. `NotificationManager manager = getSystemService(NOTIFICATION_SERVICE)`"
+},
+{
+  "id": 43,
+  "title": "Q43. What is a Notification Channel?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. A way to group related notifications together.",
+    "2. A way to define the appearance of a notification.",
+    "3. A way to set the priority of a notification.",
+    "4. A way to handle user interactions with a notification."
+  ],
+  "answer": "1. A way to group related notifications together."
+},
+{
+  "id": 44,
+  "title": "Q44. How do you create a Notification Channel?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By calling the `createNotificationChannel()` method on the Notification Manager.",
+    "2. By declaring the channel in the manifest.",
+    "3. By using the `NotificationCompat.Builder` class.",
+    "4. By using the `NotificationCompat.Channel` class."
+  ],
+  "answer": "1. By calling the `createNotificationChannel()` method on the Notification Manager."
+},
+{
+  "id": 45,
+  "title": "Q45. What is the purpose of the `NotificationCompat.Builder` class?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To create a Notification Channel.",
+    "2. To build a notification object.",
+    "3. To display a notification to the user.",
+    "4. To handle user interactions with a notification."
+  ],
+  "answer": "2. To build a notification object."
+},
+{
+  "id": 46,
+  "title": "Q46. How do you set the content of a notification?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By using the `setContentTitle()` and `setContentText()` methods of the Notification Builder.",
+    "2. By using the `setContent()` method of the Notification Builder.",
+    "3. By setting the content in the `onReceive()` method of a Broadcast Receiver.",
+    "4. By setting the content in the `onCreate()` method of an Activity."
+  ],
+  "answer": "1. By using the `setContentTitle()` and `setContentText()` methods of the Notification Builder."
+},
+{
+  "id": 38,
+  "title": "Q38. What is a Broadcast Receiver?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. A component that listens for system events and broadcasts them to other apps.",
+    "2. A component that handles user input events.",
+    "3. A component that manages data storage and retrieval.",
+    "4. A component that handles network requests."
+  ],
+  "answer": "1. A component that listens for system events and broadcasts them to other apps."
+},
+{
+  "id": 39,
+  "title": "Q39. How do you register a Broadcast Receiver?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By using the `registerReceiver()` method in your Activity.",
+    "2. By declaring the Receiver in the manifest.",
+    "3. By using the `startService()` method.",
+    "4. By using the `bindService()` method."
+  ],
+  "answer": "1. By using the `registerReceiver()` method in your Activity."
+},
+{
+  "id": 40,
+  "title": "Q40. What is the difference between static and dynamic registration of a Broadcast Receiver?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. Static registration registers the Receiver in the manifest, while dynamic registration registers it in code.",
+    "2. Dynamic registration registers the Receiver in the manifest, while static registration registers it in code.",
+    "3. Static registration is used for system broadcasts, while dynamic registration is used for app-specific broadcasts.",
+    "4. Dynamic registration is used for system broadcasts, while static registration is used for app-specific broadcasts."
+  ],
+  "answer": "1. Static registration registers the Receiver in the manifest, while dynamic registration registers it in code."
+},
+{
+  "id": 41,
+  "title": "Q41. What is the purpose of the `onReceive()` method in a Broadcast Receiver?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To register the Receiver for broadcasts.",
+    "2. To handle received broadcasts.",
+    "3. To send broadcasts to other apps.",
+    "4. To manage the lifecycle of the Receiver."
+  ],
+  "answer": "2. To handle received broadcasts."
+},
+{
+  "id": 42,
+  "title": "Q42. How do you unregister a Broadcast Receiver?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By calling the `unregisterReceiver()` method in your Activity.",
+    "2. By removing the Receiver declaration from the manifest.",
+    "3. By using the `stopService()` method.",
+    "4. By using the `unbindService()` method."
+  ],
+  "answer": "1. By calling the `unregisterReceiver()` method in your Activity."
+},
+{
+  "id": 43,
+  "title": "Q43. What is the purpose of the `sendBroadcast()` method?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To register a Broadcast Receiver.",
+    "2. To send a broadcast to other apps.",
+    "3. To handle received broadcasts.",
+    "4. To manage the lifecycle of a Broadcast Receiver."
+  ],
+  "answer": "2. To send a broadcast to other apps."
+},
+{
+  "id": 44,
+  "title": "Q44. What is the difference between `sendBroadcast()`, `sendOrderedBroadcast()`, and `sendStickyBroadcast()`?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. `sendBroadcast()` sends a broadcast to all registered receivers, while `sendOrderedBroadcast()` sends a broadcast to receivers in a specific order.",
+    "2. `sendOrderedBroadcast()` sends a broadcast to all registered receivers, while `sendBroadcast()` sends a broadcast to receivers in a specific order.",
+    "3. `sendStickyBroadcast()` sends a broadcast that remains available to all registered receivers until explicitly removed.",
+    "4. All three methods send broadcasts to registered receivers, but with different levels of control and behavior."
+  ],
+  "answer": "4. All three methods send broadcasts to registered receivers, but with different levels of control and behavior."
+},
+{
+  "id": 45,
+  "title": "Q45. What are some common system broadcasts that you can listen to?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. `ACTION_BOOT_COMPLETED`",
+    "2. `ACTION_BATTERY_CHANGED`",
+    "3. `ACTION_SCREEN_ON`",
+    "4. `ACTION_HEADSET_PLUG`",
+    "5. All of the above"
+  ],
+  "answer": "5. All of the above"
+},
+{
+  "id": 46,
+  "title": "Q46. How can you create a custom broadcast to communicate between different components of your app?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By creating a new Intent with a custom action and sending it using `sendBroadcast()`.",
+    "2. By using a SharedPreferences file to store and retrieve data.",
+    "3. By using a database to store and retrieve data.",
+    "4. By using a global variable to share data."
+  ],
+  "answer": "1. By creating a new Intent with a custom action and sending it using `sendBroadcast()`."
+},
+{
+  "id": 47,
+  "title": "Q47. What is the best way to handle network connectivity changes in an Android app?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By using the `NetworkChangeReceiver` class.",
+    "2. By listening for the `ACTION_BATTERY_CHANGED` broadcast.",
+    "3. By polling the network status periodically.",
+    "4. By using a background service to monitor network connectivity."
+  ],
+  "answer": "1. By using the `NetworkChangeReceiver` class."
+},
+{
+  "id": 48,
+  "title": "Q48.  What does the following code do in Jetpack Compose? \n\n```kotlin\n@Composable\nfun MyComposable() { \n    val context = LocalContext.current\n    val receiver = object : BroadcastReceiver() {\n        override fun onReceive(context: Context?, intent: Intent?) {\n            // Handle the broadcast\n        }\n    }\n    LaunchedEffect(key1 = receiver) { \n        context.registerReceiver(receiver, IntentFilter(\"my_custom_action\"))\n    }\n    // ... other composables\n}\n```",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. Registers a broadcast receiver for a custom action named `my_custom_action`.",
+    "2. Sends a broadcast to other apps.",
+    "3. Creates a state variable that can be used to control the visibility of a dialog.",
+    "4. Launches a new activity."
+  ],
+  "answer": "1. Registers a broadcast receiver for a custom action named `my_custom_action`."
+},
+{
+  "id": 49,
+  "title": "Q49. What is the purpose of the Notification Manager in Android?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To manage data storage and retrieval.",
+    "2. To handle user input events.",
+    "3. To display notifications to the user.",
+    "4. To communicate with other apps on the device."
+  ],
+  "answer": "3. To display notifications to the user."
+},
+{
+  "id": 50,
+  "title": "Q50. How do you get an instance of the Notification Manager in an Activity?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. `NotificationManager manager = new NotificationManager()`",
+    "2. `NotificationManager manager = getSystemService(NOTIFICATION_SERVICE)`",
+    "3. `NotificationManager manager = getNotificationManager()`",
+    "4. `NotificationManager manager = NotificationManager.getInstance()`"
+  ],
+  "answer": "2. `NotificationManager manager = getSystemService(NOTIFICATION_SERVICE)`"
+},
+{
+  "id": 51,
+  "title": "Q51. What is a Notification Channel?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. A way to group related notifications together.",
+    "2. A way to define the appearance of a notification.",
+    "3. A way to set the priority of a notification.",
+    "4. A way to handle user interactions with a notification."
+  ],
+  "answer": "1. A way to group related notifications together."
+},
+{
+  "id": 52,
+  "title": "Q52. How do you create a Notification Channel?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By calling the `createNotificationChannel()` method on the Notification Manager.",
+    "2. By declaring the channel in the manifest.",
+    "3. By using the `NotificationCompat.Builder` class.",
+    "4. By using the `NotificationCompat.Channel` class."
+  ],
+  "answer": "1. By calling the `createNotificationChannel()` method on the Notification Manager."
+},
+{
+  "id": 53,
+  "title": "Q53. What is the purpose of the `NotificationCompat.Builder` class?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To create a Notification Channel.",
+    "2. To build a notification object.",
+    "3. To display a notification to the user.",
+    "4. To handle user interactions with a notification."
+  ],
+  "answer": "2. To build a notification object."
+},
+{
+  "id": 54,
+  "title": "Q54. How do you set the content of a notification?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By using the `setContentTitle()` and `setContentText()` methods of the Notification Builder.",
+    "2. By using the `setContent()` method of the Notification Builder.",
+    "3. By setting the content in the `onReceive()` method of a Broadcast Receiver.",
+    "4. By setting the content in the `onCreate()` method of an Activity."
+  ],
+  "answer": "1. By using the `setContentTitle()` and `setContentText()` methods of the Notification Builder."
+},
+{
+  "id": 55,
+  "title": "Q55. How do you set an icon for a notification?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By using the `setIcon()` method of the Notification Builder.",
+    "2. By setting the icon in the manifest.",
+    "3. By using the `setSmallIcon()` method of the Notification Builder.",
+    "4. By using the `setLargeIcon()` method of the Notification Builder."
+  ],
+  "answer": "3. By using the `setSmallIcon()` method of the Notification Builder."
+},
+{
+  "id": 56,
+  "title": "Q56. How do you create a notification with a custom layout?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By using the `setCustomContentView()` method of the Notification Builder.",
+    "2. By using the `setCustomBigContentView()` method of the Notification Builder.",
+    "3. By using the `setContent()` method of the Notification Builder and providing a custom view.",
+    "4. By using the `setLargeIcon()` method of the Notification Builder and providing a custom image."
+  ],
+  "answer": "1. By using the `setCustomContentView()` method of the Notification Builder."
+},
+{
+  "id": 57,
+  "title": "Q57. How do you set the notification's priority?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By using the `setPriority()` method of the Notification Builder.",
+    "2. By using the `setImportance()` method of the Notification Builder.",
+    "3. By using the `setCategory()` method of the Notification Builder.",
+    "4. By setting the priority in the manifest."
+  ],
+  "answer": "1. By using the `setPriority()` method of the Notification Builder."
+},
+{
+  "id": 58,
+  "title": "Q58. How do you set a notification's sound, vibration, and LED color?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By using the `setSound()` method for sound, `setVibrate()` method for vibration, and `setLights()` method for LED color.",
+    "2. By using the `setDefaults()` method of the Notification Builder and specifying the desired flags.",
+    "3. By using the `setCategory()` method of the Notification Builder and specifying the desired category.",
+    "4. By setting the sound, vibration, and LED color in the manifest."
+  ],
+  "answer": "1. By using the `setSound()` method for sound, `setVibrate()` method for vibration, and `setLights()` method for LED color."
+},
+{
+  "id": 59,
+  "title": "Q59. How do you handle user interactions with a notification, such as clicking on it?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By using the `setContentIntent()` method of the Notification Builder.",
+    "2. By using the `setDeleteIntent()` method of the Notification Builder.",
+    "3. By using the `setFullScreenIntent()` method of the Notification Builder.",
+    "4. By using the `setCategory()` method of the Notification Builder and specifying the desired category."
+  ],
+  "answer": "1. By using the `setContentIntent()` method of the Notification Builder."
+},
+{
+  "id": 60,
+  "title": "Q60. How do you dismiss a notification?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By calling the `cancel()` method on the Notification Manager.",
+    "2. By using the `setDeleteIntent()` method of the Notification Builder.",
+    "3. By using the `setContentIntent()` method of the Notification Builder and setting a null Intent.",
+    "4. By calling the `finish()` method of the Activity."
+  ],
+  "answer": "1. By calling the `cancel()` method on the Notification Manager."
+},
+{
+  "id": 61,
+  "title": "Q61. What does the following code do in Jetpack Compose? \n\n```kotlin\n@Composable\nfun MyComposable() { \n    val context = LocalContext.current\n    val notificationManager = context.getSystemService(NotificationManager::class.java)\n    // ... create notification builder\n    notificationManager.notify(1, notificationBuilder.build())\n}\n```",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. Creates a notification channel.",
+    "2. Displays a notification to the user.",
+    "3. Registers a broadcast receiver for a custom action.",
+    "4. Launches a new activity."
+  ],
+  "answer": "2. Displays a notification to the user."
+},
+{
+  "id": 62,
+  "title": "Q62. What is the purpose of the Alarm Manager in Android?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To manage background processes.",
+    "2. To schedule tasks to be executed at specific times or intervals.",
+    "3. To handle user input events.",
+    "4. To manage data storage and retrieval."
+  ],
+  "answer": "2. To schedule tasks to be executed at specific times or intervals."
+},
+{
+  "id": 63,
+  "title": "Q63. How do you get an instance of the Alarm Manager in an Activity?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. `AlarmManager manager = new AlarmManager()`",
+    "2. `AlarmManager manager = getSystemService(ALARM_SERVICE)`",
+    "3. `AlarmManager manager = getAlarmManager()`",
+    "4. `AlarmManager manager = AlarmManager.getInstance()`"
+  ],
+  "answer": "2. `AlarmManager manager = getSystemService(ALARM_SERVICE)`"
+},
+{
+  "id": 64,
+  "title": "Q64. What are the different types of alarms that you can schedule using the Alarm Manager?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. One-time alarms and repeating alarms",
+    "2. Time-based alarms and interval-based alarms",
+    "3. System alarms and app-specific alarms",
+    "4. All of the above"
+  ],
+  "answer": "4. All of the above"
+},
+{
+  "id": 65,
+  "title": "Q65. How do you schedule a one-time alarm using the Alarm Manager?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By using the `set()` method with the `RTC_WAKEUP` flag.",
+    "2. By using the `setRepeating()` method with the `RTC_WAKEUP` flag.",
+    "3. By using the `setExact()` method with the `RTC_WAKEUP` flag.",
+    "4. By using the `setExactAndAllowWhileIdle()` method with the `RTC_WAKEUP` flag."
+  ],
+  "answer": "1. By using the `set()` method with the `RTC_WAKEUP` flag."
+},
+{
+  "id": 66,
+  "title": "Q66. How do you schedule a repeating alarm using the Alarm Manager?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By using the `setRepeating()` method with the `RTC_WAKEUP` flag.",
+    "2. By using the `setExact()` method with the `RTC_WAKEUP` flag.",
+    "3. By using the `setExactAndAllowWhileIdle()` method with the `RTC_WAKEUP` flag.",
+    "4. By calling the `set()` method multiple times with different trigger times."
+  ],
+  "answer": "1. By using the `setRepeating()` method with the `RTC_WAKEUP` flag."
+},
+{
+  "id": 67,
+  "title": "Q67. How do you cancel an alarm that was previously scheduled?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By calling the `cancel()` method on the Alarm Manager.",
+    "2. By using the `set()` method with a null trigger time.",
+    "3. By using the `setRepeating()` method with a 0 interval.",
+    "4. By calling the `finish()` method of the Activity."
+  ],
+  "answer": "1. By calling the `cancel()` method on the Alarm Manager."
+},
+{
+  "id": 68,
+  "title": "Q68. How do you receive a notification when an alarm triggers?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By registering a Broadcast Receiver for the `ACTION_BOOT_COMPLETED` action.",
+    "2. By registering a Broadcast Receiver for the `ACTION_BATTERY_CHANGED` action.",
+    "3. By registering a Broadcast Receiver for the `ACTION_TIME_TICK` action.",
+    "4. By registering a Broadcast Receiver for the `ACTION_TIME_CHANGED` action."
+  ],
+  "answer": "3. By registering a Broadcast Receiver for the `ACTION_TIME_TICK` action."
+},
+{
+  "id": 69,
+  "title": "Q69. What is the difference between `set()` and `setExact()` in the Alarm Manager?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. `set()` provides an approximate trigger time, while `setExact()` provides a precise trigger time.",
+    "2. `setExact()` provides an approximate trigger time, while `set()` provides a precise trigger time.",
+    "3. `set()` is used for one-time alarms, while `setExact()` is used for repeating alarms.",
+    "4. `setExact()` is used for one-time alarms, while `set()` is used for repeating alarms."
+  ],
+  "answer": "1. `set()` provides an approximate trigger time, while `setExact()` provides a precise trigger time."
+},
+{
+  "id": 70,
+  "title": "Q70. What does the following code do? \n\n```kotlin\nval alarmManager = getSystemService(AlarmManager::class.java)\nval intent = Intent(this, MyReceiver::class.java)\nval pendingIntent = PendingIntent.getBroadcast(this, 0, intent, 0)\nalarmManager.set(AlarmManager.RTC_WAKEUP, triggerTimeInMillis, pendingIntent)\n```",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. Schedules a one-time alarm that will trigger at the specified time.",
+    "2. Schedules a repeating alarm that will trigger every specified interval.",
+    "3. Registers a broadcast receiver for a custom action.",
+    "4. Launches a new activity."
+  ],
+  "answer": "1. Schedules a one-time alarm that will trigger at the specified time."
+},
+{
+  "id": 71,
+  "title": "Q71. What is a Service in Android?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. A component that runs in the background and performs long-running tasks.",
+    "2. A component that handles user input events.",
+    "3. A component that manages data storage and retrieval.",
+    "4. A component that communicates with other apps on the device."
+  ],
+  "answer": "1. A component that runs in the background and performs long-running tasks."
+},
+{
+  "id": 72,
+  "title": "Q72. How do you create a Service?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By extending the `Service` class.",
+    "2. By using the `startService()` method.",
+    "3. By using the `bindService()` method.",
+    "4. By using the `registerReceiver()` method."
+  ],
+  "answer": "1. By extending the `Service` class."
+},
+{
+  "id": 73,
+  "title": "Q73. What are the two main ways to start a Service?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. Using `startService()` and `bindService()`",
+    "2. Using `startForegroundService()` and `startService()`",
+    "3. Using `bindService()` and `registerReceiver()`",
+    "4. Using `startService()` and `registerReceiver()`"
+  ],
+  "answer": "1. Using `startService()` and `bindService()`"
+},
+{
+  "id": 74,
+  "title": "Q74. What is the difference between `startService()` and `bindService()`?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. `startService()` starts a service that runs in the background, while `bindService()` starts a service that is bound to a specific client.",
+    "2. `bindService()` starts a service that runs in the background, while `startService()` starts a service that is bound to a specific client.",
+    "3. `startService()` starts a service that is used to send broadcasts, while `bindService()` starts a service that is used to handle data.",
+    "4. `bindService()` starts a service that is used to send broadcasts, while `startService()` starts a service that is used to handle data."
+  ],
+  "answer": "1. `startService()` starts a service that runs in the background, while `bindService()` starts a service that is bound to a specific client."
+},
+{
+  "id": 75,
+  "title": "Q75. How do you stop a Service that was started using `startService()`?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By calling the `stopService()` method.",
+    "2. By calling the `unbindService()` method.",
+    "3. By calling the `finish()` method of the Activity.",
+    "4. By calling the `unregisterReceiver()` method."
+  ],
+  "answer": "1. By calling the `stopService()` method."
+},
+{
+  "id": 76,
+  "title": "Q76. How do you unbind a Service that was started using `bindService()`?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By calling the `unbindService()` method.",
+    "2. By calling the `stopService()` method.",
+    "3. By calling the `finish()` method of the Activity.",
+    "4. By calling the `unregisterReceiver()` method."
+  ],
+  "answer": "1. By calling the `unbindService()` method."
+},
+{
+  "id": 77,
+  "title": "Q77. What is the purpose of the `onStartCommand()` method in a Service?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To initialize the Service.",
+    "2. To handle the Service's starting logic.",
+    "3. To handle the Service's binding logic.",
+    "4. To handle the Service's stopping logic."
+  ],
+  "answer": "2. To handle the Service's starting logic."
+},
+{
+  "id": 78,
+  "title": "Q78. What is the purpose of the `onBind()` method in a Service?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To initialize the Service.",
+    "2. To handle the Service's binding logic.",
+    "3. To handle the Service's stopping logic.",
+    "4. To handle the Service's starting logic."
+  ],
+  "answer": "2. To handle the Service's binding logic."
+},
+{
+  "id": 79,
+  "title": "Q79. What is the purpose of the `onUnbind()` method in a Service?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To handle the Service's unbinding logic.",
+    "2. To handle the Service's stopping logic.",
+    "3. To handle the Service's starting logic.",
+    "4. To handle the Service's binding logic."
+  ],
+  "answer": "1. To handle the Service's unbinding logic."
+},
+{
+  "id": 80,
+  "title": "Q80. What is the purpose of the `onDestroy()` method in a Service?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To handle the Service's stopping logic.",
+    "2. To handle the Service's starting logic.",
+    "3. To handle the Service's binding logic.",
+    "4. To handle the Service's unbinding logic."
+  ],
+  "answer": "1. To handle the Service's stopping logic."
+},
+{
+  "id": 81,
+  "title": "Q81. What does the following code do? \n\n```kotlin\nval intent = Intent(this, MyService::class.java)\nstartService(intent)\n```",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. Starts a service named `MyService` in the background.",
+    "2. Binds a service named `MyService` to the current activity.",
+    "3. Registers a broadcast receiver for a custom action.",
+    "4. Launches a new activity."
+  ],
+  "answer": "1. Starts a service named `MyService` in the background."
+},
+{
+  "id": 82,
+  "title": "Q82. What are the different ways to store data in an Android app?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. SharedPreferences",
+    "2. Internal storage",
+    "3. External storage",
+    "4. SQLite database",
+    "5. Room persistence library",
+    "6. All of the above"
+  ],
+  "answer": "6. All of the above"
+},
+{
+  "id": 83,
+  "title": "Q83. What is SharedPreferences used for?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To store small amounts of key-value data.",
+    "2. To store large amounts of structured data.",
+    "3. To store images and other media files.",
+    "4. To store user preferences and settings."
+  ],
+  "answer": "4. To store user preferences and settings."
+},
+{
+  "id": 84,
+  "title": "Q84. How do you access SharedPreferences in an Activity?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. `SharedPreferences prefs = getSharedPreferences('my_prefs', MODE_PRIVATE)`",
+    "2. `SharedPreferences prefs = getSharedPreferences('my_prefs', MODE_WORLD_READABLE)`",
+    "3. `SharedPreferences prefs = getSharedPreferences('my_prefs', MODE_WORLD_WRITEABLE)`",
+    "4. `SharedPreferences prefs = SharedPreferences.getInstance('my_prefs')`",
+  ],
+  "answer": "1. `SharedPreferences prefs = getSharedPreferences('my_prefs', MODE_PRIVATE)`"
+},
+{
+  "id": 85,
+  "title": "Q85. How do you store a value in SharedPreferences?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. `prefs.putString('key', 'value')`",
+    "2. `prefs.put('key', 'value')`",
+    "3. `prefs.setValue('key', 'value')`",
+    "4. `prefs.setData('key', 'value')`",
+  ],
+  "answer": "1. `prefs.putString('key', 'value')`"
+},
+{
+  "id": 86,
+  "title": "Q86. How do you retrieve a value from SharedPreferences?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. `String value = prefs.getString('key', null)`",
+    "2. `String value = prefs.get('key')`",
+    "3. `String value = prefs.getValue('key')`",
+    "4. `String value = prefs.getData('key')`",
+  ],
+  "answer": "1. `String value = prefs.getString('key', null)`"
+},
+{
+  "id": 87,
+  "title": "Q87. What is Internal storage used for?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To store private app data that is only accessible by the app itself.",
+    "2. To store public app data that is accessible by other apps.",
+    "3. To store images and other media files.",
+    "4. To store user preferences and settings."
+  ],
+  "answer": "1. To store private app data that is only accessible by the app itself."
+},
+{
+  "id": 88,
+  "title": "Q88. How do you access Internal storage in an Activity?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. `File file = getFilesDir()`",
+    "2. `File file = getExternalFilesDir(null)`",
+    "3. `File file = getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)`",
+    "4. `File file = File.createTempFile('temp', '.txt')`",
+  ],
+  "answer": "1. `File file = getFilesDir()`"
+},
+{
+  "id": 89,
+  "title": "Q89. What is External storage used for?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To store public app data that is accessible by other apps.",
+    "2. To store private app data that is only accessible by the app itself.",
+    "3. To store images and other media files.",
+    "4. To store user preferences and settings."
+  ],
+  "answer": "1. To store public app data that is accessible by other apps."
+},
+{
+  "id": 90,
+  "title": "Q90. How do you access External storage in an Activity?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. `File file = getExternalFilesDir(null)`",
+    "2. `File file = getFilesDir()`",
+    "3. `File file = getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)`",
+    "4. `File file = File.createTempFile('temp', '.txt')`",
+  ],
+  "answer": "1. `File file = getExternalFilesDir(null)`"
+},
+{
+  "id": 91,
+  "title": "Q91. What is SQLite used for?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To store structured data in a relational database.",
+    "2. To store small amounts of key-value data.",
+    "3. To store images and other media files.",
+    "4. To store user preferences and settings."
+  ],
+  "answer": "1. To store structured data in a relational database."
+},
+{
+  "id": 92,
+  "title": "Q92. What is Room persistence library used for?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To provide an abstraction layer over SQLite, making it easier to work with databases.",
+    "2. To store small amounts of key-value data.",
+    "3. To store images and other media files.",
+    "4. To store user preferences and settings."
+  ],
+  "answer": "1. To provide an abstraction layer over SQLite, making it easier to work with databases."
+},
+{
+  "id": 93,
+  "title": "Q93. What does the following code do? \n\n```kotlin\nval prefs = getSharedPreferences('my_prefs', MODE_PRIVATE)\nval editor = prefs.edit()\neditor.putString('username', 'John Doe')\neditor.apply()\n```",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. Stores a username in SharedPreferences.",
+    "2. Retrieves a username from SharedPreferences.",
+    "3. Clears all data from SharedPreferences.",
+    "4. Creates a new database."
+  ],
+  "answer": "1. Stores a username in SharedPreferences."
+},
+
+{
+  "id": 95,
+  "title": "Q95. What are the common ways to perform network communication in an Android app?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. Using `HttpURLConnection`",
+    "2. Using `OkHttp`",
+    "3. Using Retrofit",
+    "4. Using Volley",
+    "5. All of the above"
+  ],
+  "answer": "5. All of the above"
+},
+{
+  "id": 96,
+  "title": "Q96. What is `HttpURLConnection` used for?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To perform HTTP requests.",
+    "2. To store user preferences and settings.",
+    "3. To manage the lifecycle of an Activity.",
+    "4. To handle user input events."
+  ],
+  "answer": "1. To perform HTTP requests."
+},
+{
+  "id": 97,
+  "title": "Q97. What are the advantages of using `OkHttp` over `HttpURLConnection`?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. `OkHttp` is more efficient and provides features like caching and connection pooling.",
+    "2. `OkHttp` is simpler to use and requires less code.",
+    "3. `OkHttp` is more secure and provides built-in support for HTTPS.",
+    "4. All of the above"
+  ],
+  "answer": "4. All of the above"
+},
+{
+  "id": 98,
+  "title": "Q98. What is Retrofit used for?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To make it easier to perform network requests by providing an abstraction layer over HTTP.",
+    "2. To store user preferences and settings.",
+    "3. To manage the lifecycle of an Activity.",
+    "4. To handle user input events."
+  ],
+  "answer": "1. To make it easier to perform network requests by providing an abstraction layer over HTTP."
+},
+{
+  "id": 99,
+  "title": "Q99. What is Volley used for?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To perform network requests.",
+    "2. To store user preferences and settings.",
+    "3. To manage the lifecycle of an Activity.",
+    "4. To handle user input events."
+  ],
+  "answer": "1. To perform network requests."
+},
+{
+  "id": 100,
+  "title": "Q100. What does the following code do? \n\n```kotlin\nval client = OkHttpClient()\nval request = Request.Builder().url(\"https://www.google.com\").build()\nval response = client.newCall(request).execute()\n```",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. Performs an HTTP request to the Google website.",
+    "2. Stores a username in SharedPreferences.",
+    "3. Creates a new database.",
+    "4. Launches a new activity."
+  ],
+  "answer": "1. Performs an HTTP request to the Google website."
+},
+{
+  "id": 101,
+  "title": "Q101. What is the purpose of permissions in Android?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To control access to sensitive user data and device resources.",
+    "2. To manage the lifecycle of an Activity.",
+    "3. To handle user input events.",
+    "4. To communicate with other apps on the device."
+  ],
+  "answer": "1. To control access to sensitive user data and device resources."
+},
+{
+  "id": 102,
+  "title": "Q102. How do you request permissions from the user in an Android app?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By using the `requestPermissions()` method.",
+    "2. By declaring the required permissions in the manifest.",
+    "3. By using the `startService()` method.",
+    "4. By using the `bindService()` method."
+  ],
+  "answer": "1. By using the `requestPermissions()` method."
+},
+{
+  "id": 103,
+  "title": "Q103. What are the different types of permissions in Android?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. Normal permissions and dangerous permissions.",
+    "2. System permissions and app-specific permissions.",
+    "3. Read permissions and write permissions.",
+    "4. All of the above."
+  ],
+  "answer": "1. Normal permissions and dangerous permissions."
+},
+{
+  "id": 104,
+  "title": "Q104. What is the difference between normal permissions and dangerous permissions?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. Normal permissions are granted automatically, while dangerous permissions require user approval.",
+    "2. Dangerous permissions are granted automatically, while normal permissions require user approval.",
+    "3. Normal permissions are used for accessing system resources, while dangerous permissions are used for accessing user data.",
+    "4. Dangerous permissions are used for accessing system resources, while normal permissions are used for accessing user data."
+  ],
+  "answer": "1. Normal permissions are granted automatically, while dangerous permissions require user approval."
+},
+{
+  "id": 105,
+  "title": "Q105. How can you check if a permission has been granted in your app?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By using the `checkSelfPermission()` method.",
+    "2. By using the `isPermissionGranted()` method.",
+    "3. By using the `requestPermissions()` method and checking the result.",
+    "4. By using the `getPackageManager()` method and querying for permissions."
+  ],
+  "answer": "1. By using the `checkSelfPermission()` method."
+},
+{
+  "id": 106,
+  "title": "Q106. What happens if a user denies a permission request?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. The app can continue to function normally, but with limited functionality.",
+    "2. The app will crash.",
+    "3. The user will be prompted again to grant the permission.",
+    "4. The app will be removed from the device."
+  ],
+  "answer": "1. The app can continue to function normally, but with limited functionality."
+},
+{
+  "id": 107,
+  "title": "Q107. How can you handle permission requests in Jetpack Compose?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By using the `remember` function to store the permission status in a state variable.",
+    "2. By using the `mutableStateOf` function to create a mutable state for the permission status.",
+    "3. By using the `LaunchedEffect` composable to request the permission and update the state variable.",
+    "4. All of the above."
+  ],
+  "answer": "4. All of the above."
+},
+{
+  "id": 108,
+  "title": "Q108. What does the following code do? \n\n```kotlin\nval permissionStatus = remember { mutableStateOf(PermissionStatus.Unknown) }\nLaunchedEffect(key1 = Unit) { \n    permissionStatus.value = if (ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) { \n        PermissionStatus.Granted \n    } else { \n        PermissionStatus.Denied \n    }\n}\n```",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. Checks if the ACCESS_FINE_LOCATION permission is granted and updates the `permissionStatus` state variable accordingly.",
+    "2. Requests the ACCESS_FINE_LOCATION permission from the user.",
+    "3. Handles the permission request result and updates the `permissionStatus` state variable accordingly.",
+    "4. All of the above."
+  ],
+  "answer": "1. Checks if the ACCESS_FINE_LOCATION permission is granted and updates the `permissionStatus` state variable accordingly."
+},
+{
+  "id": 109,
+  "title": "Q109. What are some ways to perform background tasks in Android?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. Using Services",
+    "2. Using WorkManager",
+    "3. Using Broadcast Receivers",
+    "4. Using JobScheduler",
+    "5. All of the above"
+  ],
+  "answer": "5. All of the above"
+},
+{
+  "id": 110,
+  "title": "Q110. What are the advantages of using WorkManager over Services for background tasks?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. WorkManager is more robust and handles battery optimization and device constraints.",
+    "2. WorkManager is easier to use and requires less code.",
+    "3. WorkManager is more efficient and uses less battery.",
+    "4. All of the above"
+  ],
+  "answer": "4. All of the above"
+},
+{
+  "id": 111,
+  "title": "Q111. What is the purpose of the `WorkRequest` class in WorkManager?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To define a specific background task that needs to be performed.",
+    "2. To schedule a background task to be executed at a specific time or interval.",
+    "3. To handle the results of a background task.",
+    "4. All of the above"
+  ],
+  "answer": "4. All of the above"
+},
+{
+  "id": 112,
+  "title": "Q112. What are the different types of WorkRequest classes in WorkManager?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. `OneTimeWorkRequest` and `PeriodicWorkRequest`",
+    "2. `SyncWorkRequest` and `AsyncWorkRequest`",
+    "3. `ForegroundWorkRequest` and `BackgroundWorkRequest`",
+    "4. All of the above"
+  ],
+  "answer": "1. `OneTimeWorkRequest` and `PeriodicWorkRequest`",
+},
+{
+  "id": 113,
+  "title": "Q113. How do you schedule a background task using WorkManager?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By using the `enqueue()` method of the `WorkManager` class.",
+    "2. By using the `startService()` method with a `WorkRequest` intent.",
+    "3. By using the `bindService()` method with a `WorkRequest` intent.",
+    "4. By using the `registerReceiver()` method for the `ACTION_BOOT_COMPLETED` action."
+  ],
+  "answer": "1. By using the `enqueue()` method of the `WorkManager` class."
+},
+{
+  "id": 114,
+  "title": "Q114. How do you cancel a WorkRequest that was previously scheduled?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By using the `cancelWorkById()` method of the `WorkManager` class.",
+    "2. By using the `stopService()` method.",
+    "3. By using the `unbindService()` method.",
+    "4. By using the `unregisterReceiver()` method."
+  ],
+  "answer": "1. By using the `cancelWorkById()` method of the `WorkManager` class."
+},
+{
+  "id": 115,
+  "title": "Q115. What are some scenarios where you would use WorkManager?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. Downloading files in the background.",
+    "2. Syncing data with a server.",
+    "3. Uploading images to a cloud service.",
+    "4. Performing periodic tasks, like sending reminders.",
+    "5. All of the above"
+  ],
+  "answer": "5. All of the above"
+},
+{
+  "id": 116,
+  "title": "Q116. What does the following code do? \n\n```kotlin\nval workRequest = OneTimeWorkRequest.Builder(MyWorker::class.java).build()\nWorkManager.getInstance(context).enqueue(workRequest)\n```",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. Schedules a one-time background task using WorkManager.",
+    "2. Starts a service named `MyService` in the background.",
+    "3. Registers a broadcast receiver for a custom action.",
+    "4. Launches a new activity."
+  ],
+  "answer": "1. Schedules a one-time background task using WorkManager."
+},
+{
+  "id": 127,
+  "title": "Q127. What are the different ways to perform multithreading in Android?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. Using Threads",
+    "2. Using AsyncTask",
+    "3. Using HandlerThread",
+    "4. Using Kotlin Coroutines",
+    "5. All of the above"
+  ],
+  "answer": "5. All of the above"
+},
+{
+  "id": 128,
+  "title": "Q128. What are the advantages of using Kotlin Coroutines over Threads for multithreading?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. Coroutines are more lightweight and efficient.",
+    "2. Coroutines are easier to use and provide a more structured way to handle asynchronous operations.",
+    "3. Coroutines integrate seamlessly with Jetpack Compose.",
+    "4. All of the above"
+  ],
+  "answer": "4. All of the above"
+},
+{
+  "id": 129,
+  "title": "Q129. What is the purpose of the `CoroutineScope` class in Kotlin Coroutines?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To define the scope of a coroutine.",
+    "2. To launch and manage coroutines.",
+    "3. To handle the results of coroutines.",
+    "4. All of the above"
+  ],
+  "answer": "4. All of the above"
+},
+{
+  "id": 130,
+  "title": "Q130. What are the different ways to launch a coroutine in Kotlin?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. Using the `launch()` function.",
+    "2. Using the `async()` function.",
+    "3. Using the `withContext()` function.",
+    "4. All of the above"
+  ],
+  "answer": "4. All of the above"
+},
+{
+  "id": 131,
+  "title": "Q131. What is the difference between the `launch()` and `async()` functions in Kotlin Coroutines?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. `launch()` launches a coroutine that runs in the background, while `async()` launches a coroutine that returns a result.",
+    "2. `async()` launches a coroutine that runs in the background, while `launch()` launches a coroutine that returns a result.",
+    "3. `launch()` is used for one-time operations, while `async()` is used for repeating operations.",
+    "4. `async()` is used for one-time operations, while `launch()` is used for repeating operations."
+  ],
+  "answer": "1. `launch()` launches a coroutine that runs in the background, while `async()` launches a coroutine that returns a result."
+},
+{
+  "id": 132,
+  "title": "Q132. How do you handle the result of a coroutine launched using the `async()` function?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By using the `await()` function.",
+    "2. By using the `join()` function.",
+    "3. By using the `getResult()` function.",
+    "4. By using the `getReturnValue()` function."
+  ],
+  "answer": "1. By using the `await()` function."
+},
+{
+  "id": 133,
+  "title": "Q133. How can you cancel a coroutine in Kotlin?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. By using the `cancel()` function.",
+    "2. By using the `stop()` function.",
+    "3. By using the `finish()` function.",
+    "4. By using the `interrupt()` function."
+  ],
+  "answer": "1. By using the `cancel()` function."
+},
+{
+  "id": 134,
+  "title": "Q134. What does the following code do? \n\n```kotlin\nval scope = CoroutineScope(Dispatchers.IO)\nscope.launch { \n    // Perform a long-running network request \n}\n```",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. Launches a coroutine that runs on the I/O dispatcher, suitable for network requests.",
+    "2. Launches a coroutine that runs on the main dispatcher, suitable for updating the UI.",
+    "3. Launches a coroutine that runs on the default dispatcher, suitable for general tasks.",
+    "4. Launches a coroutine that runs in a background thread."
+  ],
+  "answer": "1. Launches a coroutine that runs on the I/O dispatcher, suitable for network requests."
+},
+{
+  "id": 135,
+  "title": "Q135. What is the purpose of the `AndroidManifest.xml` file?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To define the structure and components of an Android app.",
+    "2. To store user preferences and settings.",
+    "3. To manage the lifecycle of an Activity.",
+    "4. To handle user input events."
+  ],
+  "answer": "1. To define the structure and components of an Android app."
+},
+{
+  "id": 136,
+  "title": "Q136. What is the purpose of the `res` directory in an Android project?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To store resources like images, layouts, strings, and colors.",
+    "2. To store source code files.",
+    "3. To store build configuration files.",
+    "4. To store test code files."
+  ],
+  "answer": "1. To store resources like images, layouts, strings, and colors."
+},
+{
+  "id": 137,
+  "title": "Q137. What is the purpose of the `build.gradle` file in an Android project?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To define build dependencies and configuration options.",
+    "2. To store source code files.",
+    "3. To store resources like images, layouts, strings, and colors.",
+    "4. To store test code files."
+  ],
+  "answer": "1. To define build dependencies and configuration options."
+},
+{
+  "id": 138,
+  "title": "Q138. What is the difference between `debug` and `release` builds in Android?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. `debug` builds are for development and testing, while `release` builds are for distribution.",
+    "2. `release` builds are for development and testing, while `debug` builds are for distribution.",
+    "3. `debug` builds are for internal use, while `release` builds are for public use.",
+    "4. `release` builds are for internal use, while `debug` builds are for public use."
+  ],
+  "answer": "1. `debug` builds are for development and testing, while `release` builds are for distribution."
+},
+{
+  "id": 139,
+  "title": "Q139. What is the purpose of the `Android SDK Manager`?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To manage the different versions of the Android SDK and tools.",
+    "2. To build and run Android apps.",
+    "3. To debug Android apps.",
+    "4. To create new Android projects."
+  ],
+  "answer": "1. To manage the different versions of the Android SDK and tools."
+},
+{
+  "id": 140,
+  "title": "Q140. What is the purpose of the `Android Virtual Device (AVD)`?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To emulate different Android devices and versions.",
+    "2. To manage the different versions of the Android SDK and tools.",
+    "3. To build and run Android apps.",
+    "4. To debug Android apps."
+  ],
+  "answer": "1. To emulate different Android devices and versions."
+},
+{
+  "id": 141,
+  "title": "Q141. What is the purpose of the `Android Debug Bridge (ADB)`?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To communicate with an Android device or emulator.",
+    "2. To manage the different versions of the Android SDK and tools.",
+    "3. To build and run Android apps.",
+    "4. To debug Android apps."
+  ],
+  "answer": "1. To communicate with an Android device or emulator."
+},
+{
+  "id": 142,
+  "title": "Q142. What is the purpose of the `Android Studio`?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To develop and debug Android apps.",
+    "2. To manage the different versions of the Android SDK and tools.",
+    "3. To build and run Android apps.",
+    "4. To create new Android projects."
+  ],
+  "answer": "1. To develop and debug Android apps."
+},
+{
+  "id": 143,
+  "title": "Q143. What is the purpose of the `Gradle` build system?",
+  "text": undefined,
+  "code2": undefined,
+  "choices": [
+    "1. To automate the build process for Android apps.",
+    "2. To manage the different versions of the Android SDK and tools.",
+    "3. To build and run Android apps.",
+    "4. To debug Android apps."
+  ],
+  "answer": "1. To automate the build process for Android apps."
+},
+
+  {
+    "id": 144,
+    "title": "Q144. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val intent = Intent(this, SecondActivity::class.java)<br>startActivity(intent)",
+    "choices": [
+      "1. Starts a new activity called SecondActivity.",
+      "2. Finishes the current activity.",
+      "3. Registers a broadcast receiver.",
+      "4. Creates a new service."
+    ],
+    "answer": "1. Starts a new activity called SecondActivity."
+  },
+  {
+    "id": 145,
+    "title": "Q145. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val intent = Intent(this, SecondActivity::class.java)<br>intent.putExtra(\"name\", \"John Doe\")<br>startActivity(intent)",
+    "choices": [
+      "1. Starts a new activity called SecondActivity and passes a string extra named \"name\" with the value \"John Doe\".",
+      "2. Starts a new activity called SecondActivity and passes an integer extra named \"name\" with the value \"John Doe\".",
+      "3. Starts a new activity called SecondActivity and sets the activity's title to \"John Doe\".",
+      "4. Starts a new activity called SecondActivity and displays a toast message with the text \"John Doe\"."
+    ],
+    "answer": "1. Starts a new activity called SecondActivity and passes a string extra named \"name\" with the value \"John Doe\"."
+  },
+  {
+    "id": 146,
+    "title": "Q146. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "override fun onCreate(savedInstanceState: Bundle?) {<br>super.onCreate(savedInstanceState)<br>setContentView(R.layout.activity_main)<br>val name = intent.getStringExtra(\"name\")<br>if (name != null) {<br>textView.text = \"Welcome, $name!\"<br>}",
+    "choices": [
+      "1. Retrieves a string extra named \"name\" from the Intent and displays it in a TextView.",
+      "2. Retrieves an integer extra named \"name\" from the Intent and displays it in a TextView.",
+      "3. Sets the activity's title to \"Welcome, John Doe!\"",
+      "4. Displays a toast message with the text \"Welcome, John Doe!\"."
+    ],
+    "answer": "1. Retrieves a string extra named \"name\" from the Intent and displays it in a TextView."
+  },
+  {
+    "id": 147,
+    "title": "Q147. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "override fun onPause() {<br>super.onPause()<br>saveState() // Save data to SharedPreferences or other storage",
+    "choices": [
+      "1. Saves the current state of the activity before it's paused.",
+      "2. Restores the saved state of the activity when it's resumed.",
+      "3. Starts a new activity.",
+      "4. Finishes the current activity."
+    ],
+    "answer": "1. Saves the current state of the activity before it's paused."
+  },
+  {
+    "id": 148,
+    "title": "Q148. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "override fun onResume() {<br>super.onResume()<br>restoreState() // Restore data from SharedPreferences or other storage",
+    "choices": [
+      "1. Restores the saved state of the activity when it's resumed.",
+      "2. Saves the current state of the activity before it's paused.",
+      "3. Starts a new activity.",
+      "4. Finishes the current activity."
+    ],
+    "answer": "1. Restores the saved state of the activity when it's resumed."
+  },
+  {
+    "id": 149,
+    "title": "Q149. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val intent = Intent(ACTION_VIEW, Uri.parse(\"https://www.google.com\"))<br>startActivity(intent)",
+    "choices": [
+      "1. Opens a web page in a web browser.",
+      "2. Sends an email.",
+      "3. Makes a phone call.",
+      "4. Sends a text message."
+    ],
+    "answer": "1. Opens a web page in a web browser."
+  },
+  {
+    "id": 150,
+    "title": "Q150. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val intent = Intent(ACTION_SENDTO, Uri.parse(\"smsto:1234567890\"))<br>intent.putExtra(\"sms_body\", \"Hello from Android!\")<br>startActivity(intent)",
+    "choices": [
+      "1. Sends a text message to the number 1234567890.",
+      "2. Opens a web page in a web browser.",
+      "3. Makes a phone call.",
+      "4. Sends an email."
+    ],
+    "answer": "1. Sends a text message to the number 1234567890."
+  },
+  {
+    "id": 151,
+    "title": "Q151. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val intent = Intent(ACTION_DIAL, Uri.parse(\"tel:1234567890\"))<br>startActivity(intent)",
+    "choices": [
+      "1. Opens the dialer app and pre-fills the number 1234567890.",
+      "2. Makes a phone call to the number 1234567890.",
+      "3. Sends a text message to the number 1234567890.",
+      "4. Opens a web page in a web browser."
+    ],
+    "answer": "1. Opens the dialer app and pre-fills the number 1234567890."
+  },
+  {
+    "id": 152,
+    "title": "Q152. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val intent = Intent(ACTION_SEND)<br>intent.type = \"text/plain\"<br>intent.putExtra(Intent.EXTRA_TEXT, \"Share this text!\")<br>startActivity(Intent.createChooser(intent, \"Share with:\"))",
+    "choices": [
+      "1. Allows the user to share a text message using their preferred app.",
+      "2. Sends a text message to a specific contact.",
+      "3. Opens a web page in a web browser.",
+      "4. Makes a phone call."
+    ],
+    "answer": "1. Allows the user to share a text message using their preferred app."
+  },
+  {
+    "id": 153,
+    "title": "Q153. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val receiver = object : BroadcastReceiver() {<br>override fun onReceive(context: Context?, intent: Intent?) {<br>// Handle the broadcast<br>}",
+    "choices": [
+      "1. Defines a BroadcastReceiver that will handle broadcasts.",
+      "2. Registers a BroadcastReceiver.",
+      "3. Sends a broadcast to other apps.",
+      "4. Creates a new service."
+    ],
+    "answer": "1. Defines a BroadcastReceiver that will handle broadcasts."
+  },
+  {
+    "id": 154,
+    "title": "Q154. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val intentFilter = IntentFilter(\"android.net.conn.CONNECTIVITY_CHANGE\")<br>registerReceiver(receiver, intentFilter)",
+    "choices": [
+      "1. Registers a BroadcastReceiver to listen for network connectivity changes.",
+      "2. Registers a BroadcastReceiver to listen for battery changes.",
+      "3. Registers a BroadcastReceiver to listen for time changes.",
+      "4. Registers a BroadcastReceiver to listen for boot completed event."
+    ],
+    "answer": "1. Registers a BroadcastReceiver to listen for network connectivity changes."
+  },
+  {
+    "id": 155,
+    "title": "Q155. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val notificationManager = getSystemService(NotificationManager::class.java)<br>val channel = NotificationChannel(\"my_channel_id\", \"My Channel Name\", NotificationManager.IMPORTANCE_DEFAULT)<br>notificationManager.createNotificationChannel(channel)",
+    "choices": [
+      "1. Creates a notification channel.",
+      "2. Builds a notification.",
+      "3. Displays a notification.",
+      "4. Cancels a notification."
+    ],
+    "answer": "1. Creates a notification channel."
+  },
+  {
+    "id": 156,
+    "title": "Q156. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val notificationBuilder = NotificationCompat.Builder(this, \"my_channel_id\")<br>.setContentTitle(\"My Notification\")<br>.setContentText(\"This is a test notification.\")<br>.setSmallIcon(R.drawable.ic_notification)<br>val notification = notificationBuilder.build()<br>notificationManager.notify(1, notification)",
+    "choices": [
+      "1. Builds a notification and displays it.",
+      "2. Creates a notification channel.",
+      "3. Cancels a notification.",
+      "4. Registers a BroadcastReceiver."
+    ],
+    "answer": "1. Builds a notification and displays it."
+  },
+  {
+    "id": 157,
+    "title": "Q157. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val pendingIntent = PendingIntent.getActivity(this, 0, Intent(this, SecondActivity::class.java), 0)<br>notificationBuilder.setContentIntent(pendingIntent)",
+    "choices": [
+      "1. Sets an intent to be triggered when the notification is clicked.",
+      "2. Sets an intent to be triggered when the notification is dismissed.",
+      "3. Sets an intent to be triggered when the notification is created.",
+      "4. Sets an intent to be triggered when the notification is updated."
+    ],
+    "answer": "1. Sets an intent to be triggered when the notification is clicked."
+  },
+  {
+    "id": 158,
+    "title": "Q158. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val alarmManager = getSystemService(AlarmManager::class.java)<br>val intent = Intent(this, MyReceiver::class.java)<br>val pendingIntent = PendingIntent.getBroadcast(this, 0, intent, 0)<br>alarmManager.set(AlarmManager.RTC_WAKEUP, triggerTimeInMillis, pendingIntent)",
+    "choices": [
+      "1. Schedules a one-time alarm to trigger at the specified time.",
+      "2. Schedules a repeating alarm to trigger at regular intervals.",
+      "3. Cancels a previously scheduled alarm.",
+      "4. Starts a new service."
+    ],
+    "answer": "1. Schedules a one-time alarm to trigger at the specified time."
+  },
+  {
+    "id": 159,
+    "title": "Q159. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val alarmManager = getSystemService(AlarmManager::class.java)<br>val intent = Intent(this, MyReceiver::class.java)<br>val pendingIntent = PendingIntent.getBroadcast(this, 0, intent, 0)<br>alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, triggerTimeInMillis, intervalInMillis, pendingIntent)",
+    "choices": [
+      "1. Schedules a repeating alarm to trigger at regular intervals.",
+      "2. Schedules a one-time alarm to trigger at the specified time.",
+      "3. Cancels a previously scheduled alarm.",
+      "4. Starts a new service."
+    ],
+    "answer": "1. Schedules a repeating alarm to trigger at regular intervals."
+  },
+  {
+    "id": 160,
+    "title": "Q160. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "alarmManager.cancel(pendingIntent)",
+    "choices": [
+      "1. Cancels a previously scheduled alarm.",
+      "2. Schedules a one-time alarm to trigger at the specified time.",
+      "3. Schedules a repeating alarm to trigger at regular intervals.",
+      "4. Starts a new service."
+    ],
+    "answer": "1. Cancels a previously scheduled alarm."
+  },
+  {
+    "id": 161,
+    "title": "Q161. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val intent = Intent(this, MyService::class.java)<br>startService(intent)",
+    "choices": [
+      "1. Starts a service in the background.",
+      "2. Binds a service to the current activity.",
+      "3. Creates a new service.",
+      "4. Stops a running service."
+    ],
+    "answer": "1. Starts a service in the background."
+  },
+  {
+    "id": 162,
+    "title": "Q162. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val intent = Intent(this, MyService::class.java)<br>bindService(intent, connection, BIND_AUTO_CREATE)",
+    "choices": [
+      "1. Binds a service to the current activity.",
+      "2. Starts a service in the background.",
+      "3. Creates a new service.",
+      "4. Stops a running service."
+    ],
+    "answer": "1. Binds a service to the current activity."
+  },
+  {
+    "id": 163,
+    "title": "Q163. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "override fun onBind(intent: Intent?): IBinder? {<br>return MyBinder()",
+    "choices": [
+      "1. Returns an IBinder object to allow clients to interact with the service.",
+      "2. Starts the service in the background.",
+      "3. Binds the service to the current activity.",
+      "4. Stops a running service."
+    ],
+    "answer": "1. Returns an IBinder object to allow clients to interact with the service."
+  },
+  {
+    "id": 164,
+    "title": "Q164. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "unbindService(connection)",
+    "choices": [
+      "1. Unbinds the service from the current activity.",
+      "2. Stops a running service.",
+      "3. Starts a service in the background.",
+      "4. Binds a service to the current activity."
+    ],
+    "answer": "1. Unbinds the service from the current activity."
+  },
+  {
+    "id": 165,
+    "title": "Q165. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "stopService(intent)",
+    "choices": [
+      "1. Stops a running service.",
+      "2. Unbinds the service from the current activity.",
+      "3. Starts a service in the background.",
+      "4. Binds a service to the current activity."
+    ],
+    "answer": "1. Stops a running service."
+  },
+  {
+    "id": 166,
+    "title": "Q166. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val prefs = getSharedPreferences(\"my_prefs\", MODE_PRIVATE)",
+    "choices": [
+      "1. Gets an instance of SharedPreferences.",
+      "2. Saves data to SharedPreferences.",
+      "3. Retrieves data from SharedPreferences.",
+      "4. Creates a new database."
+    ],
+    "answer": "1. Gets an instance of SharedPreferences."
+  },
+  {
+    "id": 167,
+    "title": "Q167. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val editor = prefs.edit()<br>editor.putString(\"username\", \"John Doe\")<br>editor.apply()",
+    "choices": [
+      "1. Saves a username to SharedPreferences.",
+      "2. Retrieves a username from SharedPreferences.",
+      "3. Gets an instance of SharedPreferences.",
+      "4. Creates a new database."
+    ],
+    "answer": "1. Saves a username to SharedPreferences."
+  },
+  {
+    "id": 168,
+    "title": "Q168. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val username = prefs.getString(\"username\", null)",
+    "choices": [
+      "1. Retrieves a username from SharedPreferences.",
+      "2. Saves a username to SharedPreferences.",
+      "3. Gets an instance of SharedPreferences.",
+      "4. Creates a new database."
+    ],
+    "answer": "1. Retrieves a username from SharedPreferences."
+  },
+  {
+    "id": 169,
+    "title": "Q169. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val file = File(filesDir, \"my_file.txt\")",
+    "choices": [
+      "1. Creates a file in Internal storage.",
+      "2. Creates a file in External storage.",
+      "3. Reads data from a file.",
+      "4. Writes data to a file."
+    ],
+    "answer": "1. Creates a file in Internal storage."
+  },
+  {
+    "id": 170,
+    "title": "Q170. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val outputStream = FileOutputStream(file)<br>outputStream.write(\"Hello, World!\".toByteArray())<br>outputStream.close()",
+    "choices": [
+      "1. Writes data to a file.",
+      "2. Creates a file in Internal storage.",
+      "3. Creates a file in External storage.",
+      "4. Reads data from a file."
+    ],
+    "answer": "1. Writes data to a file."
+  },
+  {
+    "id": 171,
+    "title": "Q171. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val inputStream = FileInputStream(file)<br>val content = inputStream.bufferedReader().use { it.readText() }<br>inputStream.close()",
+    "choices": [
+      "1. Reads data from a file.",
+      "2. Creates a file in Internal storage.",
+      "3. Creates a file in External storage.",
+      "4. Writes data to a file."
+    ],
+    "answer": "1. Reads data from a file."
+  },
+  {
+    "id": 172,
+    "title": "Q172. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val file = File(getExternalFilesDir(null), \"my_file.txt\")",
+    "choices": [
+      "1. Creates a file in External storage.",
+      "2. Creates a file in Internal storage.",
+      "3. Reads data from a file.",
+      "4. Writes data to a file."
+    ],
+    "answer": "1. Creates a file in External storage."
+  },
+  {
+    "id": 173,
+    "title": "Q173. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val db = openOrCreateDatabase(\"mydatabase.db\", MODE_PRIVATE, null)",
+    "choices": [
+      "1. Opens an existing SQLite database or creates a new one.",
+      "2. Creates a new database in Internal storage.",
+      "3. Creates a new database in External storage.",
+      "4. Saves data to SharedPreferences."
+    ],
+    "answer": "1. Opens an existing SQLite database or creates a new one."
+  },
+  {
+    "id": 174,
+    "title": "Q174. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val sql = \"CREATE TABLE users (id INTEGER PRIMARY KEY, username TEXT)\"<br>db.execSQL(sql)",
+    "choices": [
+      "1. Creates a table in the SQLite database.",
+      "2. Inserts data into a table.",
+      "3. Queries data from a table.",
+      "4. Updates data in a table."
+    ],
+    "answer": "1. Creates a table in the SQLite database."
+  },
+  {
+    "id": 175,
+    "title": "Q175. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val sql = \"INSERT INTO users (username) VALUES ('John Doe')\"<br>db.execSQL(sql)",
+    "choices": [
+      "1. Inserts data into a table.",
+      "2. Creates a table in the SQLite database.",
+      "3. Queries data from a table.",
+      "4. Updates data in a table."
+    ],
+    "answer": "1. Inserts data into a table."
+  },
+  {
+    "id": 176,
+    "title": "Q176. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val cursor = db.rawQuery(\"SELECT * FROM users\", null)",
+    "choices": [
+      "1. Queries data from a table.",
+      "2. Creates a table in the SQLite database.",
+      "3. Inserts data into a table.",
+      "4. Updates data in a table."
+    ],
+    "answer": "1. Queries data from a table."
+  },
+  {
+    "id": 177,
+    "title": "Q177. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val sql = \"UPDATE users SET username = 'Jane Doe' WHERE id = 1\"<br>db.execSQL(sql)",
+    "choices": [
+      "1. Updates data in a table.",
+      "2. Creates a table in the SQLite database.",
+      "3. Inserts data into a table.",
+      "4. Queries data from a table."
+    ],
+    "answer": "1. Updates data in a table."
+  },
+  {
+    "id": 178,
+    "title": "Q178. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val sql = \"DELETE FROM users WHERE id = 1\"<br>db.execSQL(sql)",
+    "choices": [
+      "1. Deletes data from a table.",
+      "2. Creates a table in the SQLite database.",
+      "3. Inserts data into a table.",
+      "4. Queries data from a table."
+    ],
+    "answer": "1. Deletes data from a table."
+  },
+  {
+    "id": 179,
+    "title": "Q179. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val client = OkHttpClient()",
+    "choices": [
+      "1. Creates an OkHttpClient instance.",
+      "2. Performs an HTTP request.",
+      "3. Parses a JSON response.",
+      "4. Creates a new thread."
+    ],
+    "answer": "1. Creates an OkHttpClient instance."
+  },
+  {
+    "id": 180,
+    "title": "Q180. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val request = Request.Builder()<br>.url(\"https://api.example.com/data\")<br>.build()",
+    "choices": [
+      "1. Builds an HTTP request.",
+      "2. Creates an OkHttpClient instance.",
+      "3. Performs an HTTP request.",
+      "4. Parses a JSON response."
+    ],
+    "answer": "1. Builds an HTTP request."
+  },
+  {
+    "id": 181,
+    "title": "Q181. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val call = client.newCall(request)<br>val response = call.execute()",
+    "choices": [
+      "1. Performs an HTTP request.",
+      "2. Creates an OkHttpClient instance.",
+      "3. Builds an HTTP request.",
+      "4. Parses a JSON response."
+    ],
+    "answer": "1. Performs an HTTP request."
+  },
+  {
+    "id": 182,
+    "title": "Q182. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val responseBody = response.body<br>if (responseBody != null) {<br>val json = responseBody.string()<br>}",
+    "choices": [
+      "1. Parses a JSON response.",
+      "2. Creates an OkHttpClient instance.",
+      "3. Builds an HTTP request.",
+      "4. Performs an HTTP request."
+    ],
+    "answer": "1. Parses a JSON response."
+  },
+  {
+    "id": 183,
+    "title": "Q183. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val gson = Gson()<br>val data = gson.fromJson(json, Data::class.java)",
+    "choices": [
+      "1. Deserializes a JSON string into an object.",
+      "2. Creates an OkHttpClient instance.",
+      "3. Builds an HTTP request.",
+      "4. Performs an HTTP request."
+    ],
+    "answer": "1. Deserializes a JSON string into an object."
+  },
+  {
+    "id": 184,
+    "title": "Q184. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val service = Retrofit.Builder()<br>.baseUrl(\"https://api.example.com\")<br>.addConverterFactory(GsonConverterFactory.create())<br>.build()<br>.create(ApiService::class.java)",
+    "choices": [
+      "1. Creates a Retrofit instance and an API service.",
+      "2. Performs an HTTP request.",
+      "3. Deserializes a JSON string into an object.",
+      "4. Builds an HTTP request."
+    ],
+    "answer": "1. Creates a Retrofit instance and an API service."
+  },
+  {
+    "id": 185,
+    "title": "Q185. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val call = service.getData()<br>call.enqueue(object : Callback<Data> {<br>override fun onResponse(call: Call<Data>, response: Response<Data>) {<br>// Handle successful response<br>}<br>override fun onFailure(call: Call<Data>, t: Throwable) {<br>// Handle error<br>}",
+    "choices": [
+      "1. Performs an HTTP request using Retrofit and handles the response.",
+      "2. Creates a Retrofit instance and an API service.",
+      "3. Deserializes a JSON string into an object.",
+      "4. Builds an HTTP request."
+    ],
+    "answer": "1. Performs an HTTP request using Retrofit and handles the response."
+  },
+  {
+    "id": 186,
+    "title": "Q186. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val requestQueue = Volley.newRequestQueue(this)<br>val stringRequest = StringRequest(Request.Method.GET, \"https://api.example.com/data\",<br>Response.Listener { response -><br>// Handle successful response<br>},<br>Response.ErrorListener { error -><br>// Handle error<br>})<br>requestQueue.add(stringRequest)",
+    "choices": [
+      "1. Performs an HTTP request using Volley and handles the response.",
+      "2. Creates a Retrofit instance and an API service.",
+      "3. Deserializes a JSON string into an object.",
+      "4. Builds an HTTP request."
+    ],
+    "answer": "1. Performs an HTTP request using Volley and handles the response."
+  },
+  {
+    "id": 187,
+    "title": "Q187. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val thread = Thread {<br>// Perform long-running task<br>}",
+    "choices": [
+      "1. Creates a new thread.",
+      "2. Performs a long-running task on the main thread.",
+      "3. Performs a long-running task on a background thread.",
+      "4. Launches a coroutine."
+    ],
+    "answer": "1. Creates a new thread."
+  },
+  {
+    "id": 188,
+    "title": "Q188. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "thread.start()",
+    "choices": [
+      "1. Starts the thread.",
+      "2. Creates a new thread.",
+      "3. Stops the thread.",
+      "4. Pauses the thread."
+    ],
+    "answer": "1. Starts the thread."
+  },
+  {
+    "id": 189,
+    "title": "Q189. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val task = object : AsyncTask<Void, Void, String>() {<br>override fun doInBackground(vararg params: Void?): String {<br>// Perform long-running task<br>}<br>override fun onPostExecute(result: String) {<br>// Update UI with result<br>}",
+    "choices": [
+      "1. Creates an AsyncTask to perform a long-running task on a background thread and update the UI on the main thread.",
+      "2. Creates a new thread.",
+      "3. Launches a coroutine.",
+      "4. Performs a long-running task on the main thread."
+    ],
+    "answer": "1. Creates an AsyncTask to perform a long-running task on a background thread and update the UI on the main thread."
+  },
+  {
+    "id": 190,
+    "title": "Q190. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "task.execute()",
+    "choices": [
+      "1. Executes the AsyncTask.",
+      "2. Creates an AsyncTask.",
+      "3. Stops the AsyncTask.",
+      "4. Cancels the AsyncTask."
+    ],
+    "answer": "1. Executes the AsyncTask."
+  },
+  {
+    "id": 191,
+    "title": "Q191. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val handlerThread = HandlerThread(\"MyHandlerThread\")<br>handlerThread.start()<br>val handler = Handler(handlerThread.looper)",
+    "choices": [
+      "1. Creates a HandlerThread and a Handler to handle messages on a background thread.",
+      "2. Creates a new thread.",
+      "3. Launches a coroutine.",
+      "4. Performs a long-running task on the main thread."
+    ],
+    "answer": "1. Creates a HandlerThread and a Handler to handle messages on a background thread."
+  },
+  {
+    "id": 192,
+    "title": "Q192. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "handler.post {<br>// Perform task on the background thread<br>}",
+    "choices": [
+      "1. Posts a task to be executed on the background thread.",
+      "2. Creates a HandlerThread and a Handler.",
+      "3. Creates a new thread.",
+      "4. Launches a coroutine."
+    ],
+    "answer": "1. Posts a task to be executed on the background thread."
+  },
+  {
+    "id": 193,
+    "title": "Q193. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val scope = CoroutineScope(Dispatchers.IO)<br>scope.launch {<br>// Perform a long-running task<br>}",
+    "choices": [
+      "1. Launches a coroutine on the I/O dispatcher for background tasks.",
+      "2. Creates a new thread.",
+      "3. Creates an AsyncTask.",
+      "4. Performs a long-running task on the main thread."
+    ],
+    "answer": "1. Launches a coroutine on the I/O dispatcher for background tasks."
+  },
+  {
+    "id": 194,
+    "title": "Q194. What does the following code snippet do?",
+    "text": undefined,
+    "code2": "val job = scope.launch {<br>// Perform a long-running task<br>}",
+    "choices": [
+      "1. Launches a coroutine and returns a Job object to manage the coroutine.",
+      "2. Creates a new thread.",
+      "3. Creates an AsyncTask.",
+      "4. Performs a long-running task on the main thread."
+    ],
+    "answer": "1. Launches a coroutine and returns a Job object to manage the coroutine."
+  },
+];
+
 // let cppq1 = cpp[Math.floor(Math.random())* cpp.length+9];
 // // console.log(cppq1);
 
@@ -4350,15 +6859,73 @@ let jetpackCompose = [
 // 	}
 // });
 
+// chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+// 	if (request.message === "getRandomQuestion") {
+// 		console.log("Received getRandomQuestion message");
+// 		const millisecs = Date.now();
+// 		console.log(millisecs);
+// 		if (millisecs % 6 == 0 || millisecs % 7 == 0) {
+// 			const randomQuestion =
+// 				kotlin1[Math.floor(Math.random() * kotlin1.length)];
+// 			console.log("Sending response for question:", randomQuestion);
+// 			sendResponse([randomQuestion]);
+// 		}
+
+// 		if (millisecs % 8 == 0 || millisecs % 9 == 0) {
+// 			const randomQuestion =
+// 				kotlin2[Math.floor(Math.random() * kotlin2.length)];
+// 			console.log("Sending response for question:", randomQuestion);
+// 			sendResponse([randomQuestion]);
+// 		}
+// 		if (millisecs % 5 == 0 || millisecs % 11 == 0) {
+// 			const randomQuestion =
+// 				kotlinOops[Math.floor(Math.random() * kotlinOops.length)];
+// 			console.log("Sending response for question:", randomQuestion);
+// 			sendResponse([randomQuestion]);
+// 		}
+
+// 		if (millisecs % 4 == 0 || millisecs % 15 == 0) {
+// 			const randomQuestion =
+// 				jetpackCompose[Math.floor(Math.random() * jetpackCompose.length)];
+// 			console.log("Sending response for question:", randomQuestion);
+// 			sendResponse([randomQuestion]);
+// 		}
+// 		if (millisecs % 10 == 0 || millisecs % 11 == 0) {
+// 			const randomQuestion =
+// 				AndroidBasics[Math.floor(Math.random() * AndroidBasics.length)];
+// 			console.log("Sending response for question:", randomQuestion);
+// 			sendResponse([randomQuestion]);
+// 		}
+// 	}
+// });
+
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 	if (request.message === "getRandomQuestion") {
 		console.log("Received getRandomQuestion message");
-		const randomQuestion =
-			kotlin1[Math.floor(Math.random() * kotlin1.length)];
+
+		// Create an array of all the question sets
+		const questionSets = [
+			kotlin1,         // 0
+			kotlin2,         // 1
+			kotlinOops,      // 2
+			jetpackCompose,  // 3
+			AndroidBasics    // 4
+		];
+
+		// Pick a random question set
+		const randomSetIndex = Math.floor(Math.random() * questionSets.length);
+		const randomQuestionSet = questionSets[randomSetIndex];
+
+		// Pick a random question from the chosen set
+		const randomQuestion = randomQuestionSet[Math.floor(Math.random() * randomQuestionSet.length)];
+
 		console.log("Sending response for question:", randomQuestion);
+
+		// Send the random question as the response
 		sendResponse([randomQuestion]);
 	}
 });
+
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 	if (request.type === "change_quiz") {
 		chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
