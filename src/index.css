@@ -123,3 +123,8 @@ canvas{
     resize: both;
     overflow: auto !important;
 } */
+
+
+.blocked {
+    pointer-events: none;
+} 

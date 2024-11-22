@@ -2,7 +2,7 @@
 	"manifest_version": 3,
 	"name": "CPPChromeExtension",
 	"version": "1.0",
-	"permissions": ["tabs", "storage"],
+	"permissions": ["tabs", "storage", "webNavigation"],
 	"chrome_url_overrides": {
 		"newtab": "index.html"
 	},

@@ -164,6 +164,9 @@ function App2() {
 											console.log("kar de hara");
 											setIsExploding(true);
 
+											chrome.storage.local.set({ 'questionAnswered': true });
+											document.body.classList.remove('blocked');
+
 											chrome.runtime.sendMessage({ message: "correct" });
 
 											audio.play();
